@@ -21,7 +21,7 @@ export const translations = {
       specialist: "The Specialist",
       title1: "DEDICATED TO",
       title2: "ETHICAL CARE",
-      p1: "Qualified Public Health Care Supervisor with 8 years of experience in the medical field under the Ministry of Health and Sports, Myanmar. Experienced in providing treatments and consultation for illness and injuries, giving vaccination, and prescribing medication according to requirements.",
+      p1: "Qualified Public Health Care Supervisor with 8 years of total experience in the medical field, including 4 years of dedicated service under the Ministry of Health and Sports, Myanmar. Experienced in providing treatments and consultation for illness and injuries, giving vaccination, and prescribing medication according to requirements.",
       quote: "\"Passionate and ethical health care provider with the ability to manage emergency matters in time.\"",
       p2: "My career journey has taken me from specialist clinics to international eye centers and major hospitals, where I've honed my skills in patient coordination, clinical assistance, and healthcare administration.",
       stats: [
@@ -46,7 +46,7 @@ export const translations = {
         },
         {
           title: "Public Health Supervision",
-          description: "8 years of experience in providing treatments, vaccinations, and health education under the Ministry of Health."
+          description: "4 years of dedicated experience in providing treatments, vaccinations, and health education under the Ministry of Health."
         },
         {
           title: "Community Health",
@@ -211,7 +211,7 @@ export const translations = {
       specialist: "ผู้เชี่ยวชาญ",
       title1: "ทุ่มเทเพื่อ",
       title2: "การดูแลอย่างมีจริยธรรม",
-      p1: "ผู้ดูแลการดูแลสาธารณสุขที่มีคุณสมบัติเหมาะสมพร้อมประสบการณ์ 8 ปีในสาขาการแพทย์ภายใต้กระทรวงสาธารณสุขและกีฬา ประเทศเมียนมาร์ มีประสบการณ์ในการให้การรักษาและคำปรึกษาสำหรับความเจ็บป่วยและการบาดเจ็บ การให้วัคซีน และการสั่งยาตามความต้องการ",
+      p1: "ผู้ดูแลการดูแลสาธารณสุขที่มีคุณสมบัติเหมาะสมพร้อมประสบการณ์รวม 8 ปีในสาขาการแพทย์ รวมถึง 4 ปีในการปฏิบัติหน้าที่ภายใต้กระทรวงสาธารณสุขและกีฬา ประเทศเมียนมาร์ มีประสบการณ์ในการให้การรักษาและคำปรึกษาสำหรับความเจ็บป่วยและการบาดเจ็บ การให้วัคซีน และการสั่งยาตามความต้องการ",
       quote: "\"ผู้ให้บริการดูแลสุขภาพที่กระตือรือร้นและมีจริยธรรมพร้อมความสามารถในการจัดการเรื่องฉุกเฉินได้ทันเวลา\"",
       p2: "เส้นทางอาชีพของฉันพาฉันจากคลินิกเฉพาะทางไปยังศูนย์จักษุแพทย์นานาชาติและโรงพยาบาลใหญ่ๆ ซึ่งฉันได้ฝึกฝนทักษะในการประสานงานผู้ป่วย ความช่วยเหลือทางคลินิก และการบริหารจัดการสุขภาพ",
       stats: [
@@ -236,7 +236,7 @@ export const translations = {
         },
         {
           title: "การดูแลสาธารณสุข",
-          description: "ประสบการณ์ 8 ปีในการให้การรักษา การฉีดวัคซีน และสุขศึกษาภายใต้กระทรวงสาธารณสุข"
+          description: "ประสบการณ์ 4 ปีในการให้การรักษา การฉีดวัคซีน และสุขศึกษาภายใต้กระทรวงสาธารณสุข"
         },
         {
           title: "สุขภาพชุมชน",
