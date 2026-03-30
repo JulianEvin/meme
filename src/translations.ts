@@ -171,13 +171,16 @@ export const translations = {
     },
     contact: {
       connect: "Connect",
-      title1: "LET'S",
-      title2: "TALK.",
+      title: "LET'S <span class='text-slate-400'>TALK.</span>",
       description: "Currently based in Bangkok, Thailand. Ready for new professional challenges in healthcare coordination.",
+      location: "Bang Na Nuea, Bangkok. Thailand",
       form: {
         name: "Your Name",
+        namePlaceholder: "Enter your name",
         email: "Email Address",
+        emailPlaceholder: "Enter your email",
         message: "Message",
+        messagePlaceholder: "Write your message here...",
         send: "Send Message"
       }
     },
@@ -358,13 +361,16 @@ export const translations = {
     },
     contact: {
       connect: "เชื่อมต่อ",
-      title1: "มาคุย",
-      title2: "กันเถอะ",
+      title: "มาคุย <span class='text-slate-400'>กันเถอะ</span>",
       description: "ปัจจุบันอยู่ในกรุงเทพฯ ประเทศไทย พร้อมสำหรับความท้าทายทางอาชีพใหม่ๆ ในการประสานงานด้านการดูแลสุขภาพ",
+      location: "บางนาเหนือ กรุงเทพมหานคร ประเทศไทย",
       form: {
         name: "ชื่อของคุณ",
+        namePlaceholder: "กรอกชื่อของคุณ",
         email: "ที่อยู่อีเมล",
+        emailPlaceholder: "กรอกอีเมลของคุณ",
         message: "ข้อความ",
+        messagePlaceholder: "เขียนข้อความของคุณที่นี่...",
         send: "ส่งข้อความ"
       }
     },
