@@ -112,21 +112,39 @@ export default function App() {
             ))}
             
             {/* Language Toggle */}
-            <div className="flex items-center gap-1 bg-slate-100/50 p-1 rounded-full border border-slate-200/50">
-              <button 
+            <div className="flex items-center gap-1 bg-slate-100/50 p-1 rounded-full border border-slate-200/50 relative">
+              <motion.button 
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
                 onClick={() => setLanguage('en')} 
-                className={`w-8 h-8 rounded-full flex items-center justify-center text-sm transition-all duration-300 ${language === 'en' ? 'bg-white shadow-sm text-slate-900' : 'opacity-50 grayscale hover:grayscale-0 hover:opacity-100'}`}
+                className={`w-8 h-8 rounded-full flex items-center justify-center text-sm transition-all duration-300 relative z-10 ${language === 'en' ? 'text-slate-900' : 'opacity-50 grayscale hover:grayscale-0 hover:opacity-100'}`}
                 title="English"
               >
+                {language === 'en' && (
+                  <motion.div 
+                    layoutId="activeLang"
+                    className="absolute inset-0 bg-white rounded-full shadow-sm -z-10"
+                    transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                  />
+                )}
                 <img src="https://flagcdn.com/w40/gb.png" alt="English" className="w-5 h-5 rounded-full object-cover" />
-              </button>
-              <button 
+              </motion.button>
+              <motion.button 
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
                 onClick={() => setLanguage('th')} 
-                className={`w-8 h-8 rounded-full flex items-center justify-center text-sm transition-all duration-300 ${language === 'th' ? 'bg-white shadow-sm text-slate-900' : 'opacity-50 grayscale hover:grayscale-0 hover:opacity-100'}`}
+                className={`w-8 h-8 rounded-full flex items-center justify-center text-sm transition-all duration-300 relative z-10 ${language === 'th' ? 'text-slate-900' : 'opacity-50 grayscale hover:grayscale-0 hover:opacity-100'}`}
                 title="Thai"
               >
+                {language === 'th' && (
+                  <motion.div 
+                    layoutId="activeLang"
+                    className="absolute inset-0 bg-white rounded-full shadow-sm -z-10"
+                    transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                  />
+                )}
                 <img src="https://flagcdn.com/w40/th.png" alt="Thai" className="w-5 h-5 rounded-full object-cover" />
-              </button>
+              </motion.button>
             </div>
           </div>
 
@@ -161,18 +179,22 @@ export default function App() {
             ))}
             
             <div className="flex items-center gap-4 mt-4">
-              <button 
+              <motion.button 
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
                 onClick={() => setLanguage('en')} 
-                className={`px-4 py-2 rounded-full border flex items-center gap-2 ${language === 'en' ? 'bg-slate-100 border-slate-300' : 'border-transparent opacity-50'}`}
+                className={`px-4 py-2 rounded-full border flex items-center gap-2 transition-all duration-300 ${language === 'en' ? 'bg-slate-100 border-slate-300 text-slate-900' : 'border-transparent opacity-50 text-slate-600'}`}
               >
                 <img src="https://flagcdn.com/w40/gb.png" alt="English" className="w-5 h-5 rounded-full object-cover" /> English
-              </button>
-              <button 
+              </motion.button>
+              <motion.button 
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
                 onClick={() => setLanguage('th')} 
-                className={`px-4 py-2 rounded-full border flex items-center gap-2 ${language === 'th' ? 'bg-slate-100 border-slate-300' : 'border-transparent opacity-50'}`}
+                className={`px-4 py-2 rounded-full border flex items-center gap-2 transition-all duration-300 ${language === 'th' ? 'bg-slate-100 border-slate-300 text-slate-900' : 'border-transparent opacity-50 text-slate-600'}`}
               >
                 <img src="https://flagcdn.com/w40/th.png" alt="Thai" className="w-5 h-5 rounded-full object-cover" /> ไทย
-              </button>
+              </motion.button>
             </div>
           </motion.div>
         )}
@@ -184,7 +206,55 @@ export default function App() {
       <main>
         {/* Hero Section */}
         <section className="relative min-h-screen flex items-center pt-20 pb-20 px-6 md:px-12 max-w-7xl mx-auto overflow-hidden">
-          <div className="grid lg:grid-cols-2 gap-16 items-center w-full">
+          {/* Animated Background Elements */}
+          <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
+            {/* Subtle Grid */}
+            <div className="absolute inset-0 opacity-[0.03]" 
+              style={{ backgroundImage: 'radial-gradient(#0f172a 1px, transparent 1px)', backgroundSize: '40px 40px' }} 
+            />
+            
+            {/* Floating Blurred Circles */}
+            <motion.div
+              animate={{
+                x: [0, 100, 0],
+                y: [0, 50, 0],
+                scale: [1, 1.1, 1],
+              }}
+              transition={{
+                duration: 20,
+                repeat: Infinity,
+                ease: "linear"
+              }}
+              className="absolute -top-[10%] -left-[10%] w-[40%] h-[40%] rounded-full bg-blue-400/10 blur-[120px]"
+            />
+            <motion.div
+              animate={{
+                x: [0, -80, 0],
+                y: [0, 100, 0],
+                scale: [1, 1.2, 1],
+              }}
+              transition={{
+                duration: 25,
+                repeat: Infinity,
+                ease: "linear"
+              }}
+              className="absolute top-[20%] -right-[5%] w-[35%] h-[35%] rounded-full bg-indigo-400/10 blur-[100px]"
+            />
+            <motion.div
+              animate={{
+                x: [0, 50, 0],
+                y: [0, -60, 0],
+              }}
+              transition={{
+                duration: 18,
+                repeat: Infinity,
+                ease: "linear"
+              }}
+              className="absolute bottom-[10%] left-[20%] w-[30%] h-[30%] rounded-full bg-sky-300/10 blur-[110px]"
+            />
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-16 items-center w-full relative z-10">
             <motion.div 
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -234,18 +304,17 @@ export default function App() {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1, ease: "easeOut" }}
-              className="relative lg:ml-auto group w-full max-w-sm mx-auto lg:mx-0"
+              className="relative lg:ml-auto group w-full max-w-xl mx-auto lg:mx-0"
             >
-              <div className="relative w-full aspect-[3/4] rounded-3xl overflow-hidden border border-slate-200 shadow-xl transition-all duration-500 bg-white">
-                {/* Profile Image */}
-                <img 
-                  src="https://i.ibb.co/fYtsTvB9/2.jpg" 
-                  alt="Me Me Mya Saung" 
-                  className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
-                  referrerPolicy="no-referrer"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent opacity-80" />
-              </div>
+            <div className="relative w-full max-w-[450px] mx-auto rounded-3xl overflow-hidden border border-slate-200 shadow-xl transition-all duration-500 bg-white">
+    {/* Profile Image */}
+    <img 
+        src="https://i.ibb.co/9Hskwrzk/633415422-940672428625675-8789557431645681954-n.jpg" 
+        alt="Me Me Mya Saung" 
+        className="w-full h-[500px] object-cover transition-all duration-700 group-hover:scale-105"
+        referrerPolicy="no-referrer"
+    />
+</div>
               
               {/* Floating Experience Card */}
               <motion.div 
@@ -257,7 +326,7 @@ export default function App() {
                   <Briefcase className="w-6 h-6 sm:w-8 sm:h-8" />
                 </div>
                 <div>
-                  <p className="text-2xl sm:text-4xl font-black leading-none text-slate-900">4+</p>
+                  <p className="text-2xl sm:text-4xl font-black leading-none text-slate-900">8+</p>
                   <p className="text-[8px] sm:text-[10px] font-bold uppercase tracking-[0.2em] sm:tracking-[0.3em] mt-2 sm:mt-3 text-slate-500">Years of Excellence</p>
                 </div>
               </motion.div>
@@ -437,7 +506,7 @@ export default function App() {
           <div className="grid md:grid-cols-2 gap-8">
             {isLoading ? (
               // Skeleton Loader for Education
-              Array.from({ length: 4 }).map((_, index) => (
+              Array.from({ length: 5 }).map((_, index) => (
                 <div key={`skeleton-edu-${index}`} className="p-8 sm:p-10 rounded-3xl sm:rounded-[3rem] border border-slate-200 bg-white shadow-sm animate-pulse">
                   <div className="flex justify-between items-start mb-8">
                     <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-slate-200"></div>
